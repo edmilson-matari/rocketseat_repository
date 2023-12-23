@@ -96,10 +96,16 @@ body {
     border: 0;
     border-radius: 50%;
     position: absolute;
-    right: 0;
+    animation: slideOut .4s forwards;
     top: 50%;
     z-index: 1;
     transform: translateY(-50%);
+    padding: 10px;
+    transition: outline .3s;
+}
+
+#switch button:hover {
+    outline: 8px solid rgba(255, 255, 255, 0.5);
 }
 
 #switch span {
@@ -112,7 +118,8 @@ body {
 }
 
 .light #switch button {
-    left: 0;
+    animation: slideIn .4s forwards;
+
     background: var(--switch-button);
 }
 
@@ -145,4 +152,24 @@ footer a {
     padding: 24px 0;
     text-align: center;
     display: block;
+}
+
+@keyframes slideIn {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
+    }
 }
