@@ -27,6 +27,7 @@ body {
     background-image: var(--back-image);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 * {
